@@ -1,0 +1,45 @@
+========================================
+Directorio: /etc
+Funcion: Guarda los archivos de configuracion del sistema en texto plano.
+total 1.2M
+drwxr-xr-x  5 root                 root                 4.0K Aug 26 01:30 ModemManager
+drwxr-xr-x  8 root                 root                 4.0K Sep 29 08:32 NetworkManager
+drwxr-xr-x  2 root                 root                 4.0K Aug 26 01:33 PackageKit
+drwxr-xr-x  3 root                 root                 4.0K Aug 26 01:31 UPower
+drwxr-xr-x 11 root                 root                 4.0K Aug 26 01:33 X11
+=========================================
+Directorio: /var
+Funcion: Almacena datos que cambian durante la operacion como registros, cola y cache.
+total 48K
+drwxr-xr-x  2 root root     4.0K Nov 10 00:00 backups
+drwxr-xr-x 21 root root     4.0K Sep 29 09:35 cache
+drwxrwsrwt  2 root whoopsie 4.0K Nov  9 23:29 crash
+drwxr-xr-x 72 root root     4.0K Nov  9 23:45 lib
+drwxr-xr-x  2 root root     4.0K Apr 20  2026 local
+========================================
+Directorio: /home
+Funcion: contiene un subdirectorio por cad usuariocon sus archivos personales.
+total 4.0K
+drwxr-x--- 18 wgareca wgareca 4.0K Nov 10 00:01 wgareca
+========================================
+Directorio: /bin
+Funcion: contiene programas esenciales disponibles para todo usuario como ls, cp y bash.
+lrwxrwxrwx 1 root root 7 Apr 20  2026 /bin -> usr/bin
+========================================
+Directorio: /tmp
+Funcion: guarda archivos temporales que se vacian al reiniciar el sistema.
+total 0
+drwx------ 6 root root 120 Nov 10 00:00 snap-private-tmp
+drwx------ 3 root root  60 Nov  9 23:24 systemd-private-81d029ce795d4c8da1b2c9563e9b4d32-ModemManager.service-2AnxJI
+drwx------ 3 root root  60 Nov  9 23:24 systemd-private-81d029ce795d4c8da1b2c9563e9b4d32-chrony.service-mWJyWM
+drwx------ 3 root root  60 Nov  9 23:24 systemd-private-81d029ce795d4c8da1b2c9563e9b4d32-colord.service-HF8hgv
+drwx------ 3 root root  60 Nov  9 23:37 systemd-private-81d029ce795d4c8da1b2c9563e9b4d32-fwupd.service-NRO0Ih
+========================================
+Directorio: /proc
+Funcion: Sistema virtual que muestra el estado del kernel y de cada proceso en ejecucion.
+total 0
+dr-xr-xr-x  9 root            root               0 Nov  9 23:24 1
+dr-xr-xr-x  9 root            root               0 Nov  9 23:24 10
+dr-xr-xr-x  9 avahi           avahi              0 Nov  9 23:24 1152
+dr-xr-xr-x  9 root            root               0 Nov  9 23:24 1153
+dr-xr-xr-x  9 messagebus      messagebus         0 Nov  9 23:24 1154
