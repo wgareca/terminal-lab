@@ -1,0 +1,10 @@
+*~
+*.swp
+*.tmp
+*.bak
+salida/
+organized/
+respaldos/
+*.log
+respaldo-*.tar.gz
+.env
