@@ -15,3 +15,9 @@ mv /tmp/trabajo_s02/*.png organized/imagenes/ 2>/dev/null || true
 mv /tmp/trabajo_s02/*.log organized/registros/ 2>/dev/null || true
 mv /tmp/trabajo_s02/* organized/otros/ 2>/dev/null || true
 rm -rf /tmp/trabajo_s02
+
+# paso 3: aplicar permisos en octal por categoria y a los directorios
+chmod 755 organized organized/*
+chmod 755 organized/scripts/*
+chmod 644 organized/documentos/* organized/imagenes/*
+chmod 444 organized/registros/* organized/otros/*
