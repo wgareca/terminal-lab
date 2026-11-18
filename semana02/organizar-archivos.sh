@@ -21,3 +21,13 @@ chmod 755 organized organized/*
 chmod 755 organized/scripts/*
 chmod 644 organized/documentos/* organized/imagenes/*
 chmod 444 organized/registros/* organized/otros/*
+
+# paso 4: Imprimir resumen final de archivos por categoria
+echo "========================================"
+echo "Resumen de archivos organizados:"
+echo "Scripts:    $(ls -1 organized/scripts/ | wc -l)"
+echo "Documentos: $(ls -1 organized/documentos/ | wc -l)"
+echo "Imagenes:   $(ls -1 organized/imagenes/ | wc -l)"
+echo "Registros:  $(ls -1 organized/registros/ | wc -l)"
+echo "Otros:      $(ls -1 organized/otros/ | wc -l)"
+echo "========================================="
