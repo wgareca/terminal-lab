@@ -16,3 +16,7 @@ awk '{print $(NF-1)}' "$ARCHIVO" | sort | uniq -c | sort -rn
 # paso 3: lee el archivo de log y muestra completas las lineas cuyo codigo es 500
 echo "=== LINEAS CON ERROR 500 ==="
 awk '$(NF-1) == 500' "$ARCHIVO"
+
+# paso 4: lee el archivo de log, extrae la hora de cada peticion y muestra la hora pico
+echo "=== HORA PICO ==="
+CUT -d'[' -f2 "$ARCHIVO" | cut -d':' -f2 | sort | uniq -c | sort -rn | head -1
