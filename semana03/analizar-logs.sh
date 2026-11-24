@@ -12,3 +12,7 @@ cut -d' ' -f1 "$ARCHIVO" | sort | uniq -c | sort -rn | head -5
 # paso 2: lee el archivo de log, extrae los codigos HTTP y muestra cuantos hay de cada uno
 echo "=== CONTEO POR CODIGO DE ESTADO ==="
 awk '{print $(NF-1)}' "$ARCHIVO" | sort | uniq -c | sort -rn
+
+# paso 3: lee el archivo de log y muestra completas las lineas cuyo codigo es 500
+echo "=== LINEAS CON ERROR 500 ==="
+awk '$(NF-1) == 500' "$ARCHIVO"
