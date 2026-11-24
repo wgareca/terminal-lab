@@ -2,3 +2,9 @@
 #
 # analizar-logs.sh -  procesa un registro de acceso web y genera un reporte
 # Uso: ./analizar-logs.sh ../recursos/acceso.log
+
+ARCHIVO="$1"
+
+# paso 1: lee el archivo de log, extrae las IP y muestra las 5 mas frecuentes
+echo "=== TOP 5 DIRECCIONES IP ==="
+cut -d' ' -f1 "$ARCHIVO" | sort | uniq -c | sort -rn | head -5
