@@ -13,3 +13,12 @@ mkdir -p "$DESTINO"
 FECHA=$(date +%Y-%m-%d)
 PAQUETE="$DESTINO/respaldo-$FECHA.tar.gz"
 tar -czf "$PAQUETE" $ARCHIVOS 2>/dev/null
+
+# paso 3: mostrar informe con la cantidad de archivos respaldados y el tamano del paquete
+CANTIDAD=$(echo "$ARCHIVOS" | wc -l)
+TAMANO=$(du -sh "$PAQUETE" | cut -f1)
+echo "========================================"
+echo "Respaldo completado: $PAQUETE"
+echo "Archivos respaldados: $CANTIDAD"
+echo "Tamano del paquete:   $TAMANO"
+echo "========================================"
