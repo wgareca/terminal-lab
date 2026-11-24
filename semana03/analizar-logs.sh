@@ -19,4 +19,4 @@ awk '$(NF-1) == 500' "$ARCHIVO"
 
 # paso 4: lee el archivo de log, extrae la hora de cada peticion y muestra la hora pico
 echo "=== HORA PICO ==="
-CUT -d'[' -f2 "$ARCHIVO" | cut -d':' -f2 | sort | uniq -c | sort -rn | head -1
+cut -d'[' -f2 "$ARCHIVO" | cut -d':' -f2 | sort | uniq -c | sort -rn | head -1
