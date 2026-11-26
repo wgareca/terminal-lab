@@ -15,3 +15,14 @@ listar_procesos() {
     echo "=== PROCESOS DE $usuario (ORDENADOS POR %CPU) ==="
     ps -u "$usuario" -o pid,stat,%cpu,%mem,comm --sort=-%cpu | head -n 11
 }
+
+proceso_mayor_consumo() {
+    local linea pid nombre cpu
+    linea=$(ps -u "$USER" -o pid=,%cpu=,comm0 --sort0-%cpu | head -n 1)
+    pid=$(echo "$linea" | awk '{print $1}')
+    cpu=$(echo "$linea" | awk '{print $2}')
+    nombre=$(echo "$linea" | awk '{print $3}')
+    echo ""
+    echo "=== PROCESO DE MAYOR CONSUMO ==="
+    echo "PID: $pid | Nombre: $nombre | CPU: ${cpu}%"
+}
