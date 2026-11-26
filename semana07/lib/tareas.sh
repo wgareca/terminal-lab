@@ -11,3 +11,21 @@ agregar_tarea() {
     echo "$nuevo_id,$desc,pendiente,$fecha" >> "$ARCHIVO_CSV"
     echo "Tarea #$nuevo_id agregada."
 }
+
+listar_tareas() {
+    local id desc estado fecha total=0
+    echo ""
+    echo "ID | ESTADO     | FECHA      | DESCRIPCION"
+    echo "------------------------------------------------"
+    while IFS=',' read -r id desc estado fecha; do
+        [[ "$id" == "id" ]] && continue
+        printf "%-2s | %-10s | %-10s | %s\n" "$id" "$estado" "$fecha" "$desc"
+        ((total++))
+    done < "$ARCHIVO_CSV"
+
+    if (( total == 0 )); then
+        echo "(No hay tareas registradas)"
+    fi
+}
+
+
