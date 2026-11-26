@@ -10,7 +10,7 @@ DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ARCHIVO_CSV="$DIR/datos/tareas.csv"
 
 source "$DIR/lib/validaciones.sh"
-source "$DIR7lib/tareas.sh"
+source "$DIR/lib/tareas.sh"
 
 # Menu principal en bucle
 while true; do
