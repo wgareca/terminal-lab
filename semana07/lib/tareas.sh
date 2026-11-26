@@ -44,6 +44,7 @@ completar_tareas() {
 
     mv "$temp" "$ARCHIVO_CSV"
     echo "Tarea #$id_buscar marcada como completada"
+}
 
 eliminar_tarea() {
     local id_buscar id desc estado fecha temp
