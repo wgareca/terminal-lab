@@ -28,4 +28,30 @@ listar_tareas() {
     fi
 }
 
+completar_tareas() {
+    local id_buscar id desc estado fecha temp
+    read -rp "ID de la tarea a completar: " id_buscar
+    validar_id_existe "$id_buscar" || return 1
+
+    temp=$(mktemp)
+    while IFS=',' read -r id desc estado fecha; do
+        if [[ "$id" == "$id_buscar" ]]; then
+            echo "$id,$desc,completada,$fecha" >> "$temp"
+        else
+            echo "$id,$desc,$estado,$fecha" >> "$temp"
+        fi
+    done < "$ARCHIVO_CSV"
+
+    mv "$temp" "$ARCHIVO_CSV"
+    echo "Tarea #$id_buscar marcada como completada"
+
+
+
+
+
+
+
+
+
+
 
