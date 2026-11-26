@@ -45,6 +45,29 @@ else
     echo "Tipo: otro elemento especial"
 fi 
 
+# paso 3: verificar permisos y contenido
+if [[ ! -r "$RUTA" ]]; then
+    echo "Error: no tiene permiso de lectura sobre '$RUTA'" >&2
+    exit 3
+fi
+
+echo "Lectura: si"
+if [[ -w "$RUTA" ]]; then echo "Escritura: si"; else echo "Escritura: no"; fi
+if [[ -x "$RUTA" ]]; then echo "Ejecucion: si"; else echo "Ejecucion: no"; fi
+
+if [[ -f "$RUTA" ]]; then
+    if [[ -s "$RUTA" ]]; then
+        echo "Contenido: el archivo tiene datos"
+    else
+        echo "Contenido: el archivo esta vacio"
+    fi
+fi
+
+exit 0 
+
+
+
+
 
 
 
