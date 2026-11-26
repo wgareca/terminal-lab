@@ -54,7 +54,10 @@ if [ "$OPCION" = "-d" ]; then
     exit 0
 fi
 
-
+# paso 5: cualquier otra opcion es invalida (stderr y exit 2)
+echo "Error: Opcion no valida '$OPCION'" >&2
+uso
+exit 2
 
 
 
