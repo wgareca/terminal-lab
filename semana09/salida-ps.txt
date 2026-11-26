@@ -1,0 +1,80 @@
+=======================================
+Directorio: /etc
+Funcion: Guarda los archivos de configuracion del sistema en texto plano.
+
+    Directory: /etc
+
+[32;1mUnixMode  [0m[32;1m       User[0m[32;1m Group     [0m[32;1m    LastWriteTime[0m[32;1m         Size[0m[32;1m Name[0m
+[32;1m--------  [0m [32;1m      ----[0m [32;1m-----     [0m [32;1m   -------------[0m [32;1m        ----[0m [32;1m----[0m
+drwxr-xr-x       root root        26/8/2026 01:29         4096 [44;1malsa[0m
+drwxr-xr-x       root root        9/11/2026 23:42         4096 [44;1malternatives[0m
+drwxr-xr-x       root root        26/8/2026 01:29         4096 [44;1mapm[0m
+drwxr-xr-x       root root        26/8/2026 01:29         4096 [44;1mapparmor[0m
+drwxr-xr-x       root root        29/9/2026 08:32         4096 [44;1mapparmor.d[0m
+drwxr-xr-x       root root        26/8/2026 01:31         4096 [44;1mapport[0m
+========================================
+Directorio: /var
+Funcion: Almacena datos que cambian durante la operacion como registros, cola y cache.
+
+    Directory: /var
+
+[32;1mUnixMode  [0m[32;1m       User[0m[32;1m Group     [0m[32;1m    LastWriteTime[0m[32;1m         Size[0m[32;1m Name[0m
+[32;1m--------  [0m [32;1m      ----[0m [32;1m-----     [0m [32;1m   -------------[0m [32;1m        ----[0m [32;1m----[0m
+drwxr-xr-x       root root       10/11/2026 00:00         4096 [44;1mbackups[0m
+drwxr-xr-x       root root        29/9/2026 09:35         4096 [44;1mcache[0m
+drwxrwsrwt       root whoopsie    9/11/2026 23:29         4096 [44;1mcrash[0m
+drwxr-xr-x       root root        9/11/2026 23:45         4096 [44;1mlib[0m
+drwxr-xr-x       root root        20/4/2026 04:46         4096 [44;1mlocal[0m
+lrwxrwxrwx       root root        26/8/2026 01:27            9 [36;1mlock[0m -> /run/lock
+========================================
+Directorio: /home
+Funcion: contiene un subdirectorio por cada usuario con sus archivos personales.
+
+    Directory: /home
+
+[32;1mUnixMode  [0m[32;1m       User[0m[32;1m Group     [0m[32;1m    LastWriteTime[0m[32;1m         Size[0m[32;1m Name[0m
+[32;1m--------  [0m [32;1m      ----[0m [32;1m-----     [0m [32;1m   -------------[0m [32;1m        ----[0m [32;1m----[0m
+drwxr-x---    wgareca wgareca    24/11/2026 02:06         4096 [44;1mwgareca[0m
+========================================
+Directorio: /bin
+Funcion: Contiene los ejecutables esenciales del sistema disponibles para todos.
+
+    Directory: /bin
+
+[32;1mUnixMode  [0m[32;1m       User[0m[32;1m Group     [0m[32;1m    LastWriteTime[0m[32;1m         Size[0m[32;1m Name[0m
+[32;1m--------  [0m [32;1m      ----[0m [32;1m-----     [0m [32;1m   -------------[0m [32;1m        ----[0m [32;1m----[0m
+lrwxrwxrwx       root root        27/2/2026 14:18            1 [36;1mX11[0m -> .
+lrwxrwxrwx       root root        30/3/2026 12:50           28 [36;1m[[0m -> ../lib/cargo/bin/coreutils/[
+-rwxr-xr-x       root root         5/2/2026 05:55       709512 [32;1m3cpio[0m
+-rwxr-xr-x       root root        13/7/2026 13:43        14720 [32;1maa-enabled[0m
+-rwxr-xr-x       root root        13/7/2026 13:43        14720 [32;1maa-exec[0m
+-rwxr-xr-x       root root        13/7/2026 13:43        14720 [32;1maa-features-abi[0m
+========================================
+Directorio: /tmp
+Funcion: Espacio temporal para archivos de sesion que se limpian al reiniciar.
+
+    Directory: /tmp
+
+[32;1mUnixMode  [0m[32;1m       User[0m[32;1m Group     [0m[32;1m    LastWriteTime[0m[32;1m         Size[0m[32;1m Name[0m
+[32;1m--------  [0m [32;1m      ----[0m [32;1m-----     [0m [32;1m   -------------[0m [32;1m        ----[0m [32;1m----[0m
+drwx------       root root       26/11/2026 02:42          140 [44;1msnap-private-tmp[0m
+drwx------       root root        9/11/2026 23:24           60 [44;1msystemd-private-81d029ce795d4c8da1b2c9563e9b4d32-chrony.service-mWJyWM[0m
+drwx------       root root        9/11/2026 23:24           60 [44;1msystemd-private-81d029ce795d4c8da1b2c9563e9b4d32-colord.service-HF8hgv[0m
+drwx------       root root        9/11/2026 23:37           60 [44;1msystemd-private-81d029ce795d4c8da1b2c9563e9b4d32-fwupd.service-NRO0Ih[0m
+drwx------       root root        9/11/2026 23:24           60 [44;1msystemd-private-81d029ce795d4c8da1b2c9563e9b4d32-ModemManager.service-2AnxJI[0m
+drwx------       root root        9/11/2026 23:24           60 [44;1msystemd-private-81d029ce795d4c8da1b2c9563e9b4d32-polkit.service-uv1YBJ[0m
+==========================================
+Directorio: /proc
+Funcion: Sistema de archivos virtual con informacion viva de kernel y procesos.
+
+    Directory: /proc
+
+[32;1mUnixMode  [0m[32;1m       User[0m[32;1m Group     [0m[32;1m    LastWriteTime[0m[32;1m         Size[0m[32;1m Name[0m
+[32;1m--------  [0m [32;1m      ----[0m [32;1m-----     [0m [32;1m   -------------[0m [32;1m        ----[0m [32;1m----[0m
+dr-xr-xr-x       root root        9/11/2026 23:24            0 [44;1m1[0m
+dr-xr-xr-x       root root        9/11/2026 23:24            0 [44;1m10[0m
+dr-xr-xr-x      avahi avahi       9/11/2026 23:24            0 [44;1m1152[0m
+dr-xr-xr-x       root root        9/11/2026 23:24            0 [44;1m1153[0m
+dr-xr-xr-x messagebus messagebus  9/11/2026 23:24            0 [44;1m1154[0m
+dr-xr-xr-x       root root        9/11/2026 23:24            0 [44;1m1162[0m
+
