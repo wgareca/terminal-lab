@@ -50,6 +50,48 @@ lanzar_proceso_prueba() {
     ps -p "$PID_PRUEBA" -o pid,stat,comm
 }
 
+terminar_proceso() {
+    local pid="$1"
+    echo "Enviado SIGTERM (15) al PID $pid..."
+    kill -15 "$pid" 2>/dev/null || true
+    sleep 1
+
+    if kill -0 "$pid" 2>/dev/null; then
+        echo "El proceso sigue activo. Enviando SIGKILL (9)..."
+        kill -9 "$pid" 2>/dev/null || true
+        echo "Terminado con SIGKILL."
+    else
+        echo "Terminado ordenadamente con SIGTERM "
+    fi
+}
+
+OPCION="${1:-}"
+
+if [[ "$OPCION" == "-h" ]]; then
+    echo "Uso: $0 [-h | --prueba]"
+    exit 0
+elif [[ "$OPCION" == "--prueba" ]]; then
+     lanzar_proceso_prueba
+     terminar_proceso "$PID_PRUEBA"
+     exit 0
+elif [[ -n "$OPCION" ]]; then
+     echo "Error: argumento invalido '$OPCION'" >&2
+     exit 2
+fi
+
+listar_procesos
+proceso_mayor_consumo
+contar_por_estado
+
+
+
+
+
+
+
+
+
+
 
 
 
