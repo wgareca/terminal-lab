@@ -1,4 +1,4 @@
-#!7bin/bash
+#!/bin/bash
 #
 # gestor-tareas.sh - Gestor de tareas interactivo con persistencia en csv
 # Autor: wgareca
