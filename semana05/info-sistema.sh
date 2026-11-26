@@ -47,6 +47,15 @@ if [ "$OPCION" = "-u" ]; then
     exit 0
 fi
 
+# paso 4: Opcion -d con uso de disco
+if [ "$OPCION" = "-d" ]; then
+    echo "==== USO DE DISCO ==="
+    df -h / "$HOME"
+    exit 0
+fi
+
+
+
 
 
 
