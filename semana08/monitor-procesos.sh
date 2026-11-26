@@ -26,3 +26,20 @@ proceso_mayor_consumo() {
     echo "=== PROCESO DE MAYOR CONSUMO ==="
     echo "PID: $pid | Nombre: $nombre | CPU: ${cpu}%"
 }
+
+contar_por_estado() {
+    local estados
+    estados=$(ps -u "$USER" -o stat= | cut -c1)
+    echo ""
+    echo "=== CONTEO POR ESTADO ==="
+    printf "%-10s | %s\n" "ESTADO" "CANTIDAD"
+    echo "----------------------"
+    for st in R S D T Z; do
+        local cant
+        cant=$(echo "$estados" | grep -c "^${st}$" || true)
+        printf "%-10s | %d\n" "$st" "$cant"
+    done
+}
+
+
+
