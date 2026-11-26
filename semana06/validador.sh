@@ -9,7 +9,7 @@
 #   2 - Uso incorrecto o falta de argumentos
 #   3 - Sin permisos de lectura
 
-set -eup pipefail
+set -euo pipefail
 
 # Paso 1: mensaje de uso y validacion de argumentos
 uso() {
