@@ -41,5 +41,25 @@ contar_por_estado() {
     done
 }
 
+lanzar_proceso_prueba() {
+    sleep 300 &
+    PID_PRUEBA=$!
+    echo ""
+    echo "=== PROCESO DE PRUEBA ==="
+    echo "Proceso lanzado en segundo plano con PID: $PID_PRUEBA"
+    ps -p "$PID_PRUEBA" -o pid,stat,comm
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
