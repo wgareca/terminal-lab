@@ -18,7 +18,7 @@ listar_procesos() {
 
 proceso_mayor_consumo() {
     local linea pid nombre cpu
-    linea=$(ps -u "$USER" -o pid=,%cpu=,comm0 --sort0-%cpu | head -n 1)
+    linea=$(ps -u "$USER" -o pid=,%cpu=,comm= --sort=-%cpu | head -n 1)
     pid=$(echo "$linea" | awk '{print $1}')
     cpu=$(echo "$linea" | awk '{print $2}')
     nombre=$(echo "$linea" | awk '{print $3}')
