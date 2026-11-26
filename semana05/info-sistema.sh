@@ -36,3 +36,27 @@ if [ -z "$OPCION" ]; then
     echo "Memoria disp: $(free -h | awk '/^Mem:/ {print $7}')"
     exit 0
 fi
+
+# Paso 3: Opcion -u con datos del usuario
+if [ "$OPCION" = "-u" ]; then
+    echo "=== DATOS DEL USUARIO ==="
+    echo "Usuario:    $USER"
+    echo "Directorio: $HOME"
+    echo "Shell:      $SHELL"
+    echo "Grupos:     $(groups)"
+    exit 0
+fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
