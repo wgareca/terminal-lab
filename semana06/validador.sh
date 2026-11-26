@@ -28,3 +28,32 @@ if [[ "$1" == "-h" ]]; then
 fi
 
 RUTA="$1"
+
+# Paso 2: verificar existencia y tipo de ruta
+if [[ ! -e "$RUTA" ]]; then
+    echo "Error: la ruta '$RUTA' no existe" >&2
+    exit 1
+fi
+
+if [[ -L "$RUTA" ]]; then
+    echo "Tipo: enlace simbolico"
+elif [[ -d "$RUTA" ]]; then
+    echo "Tipo: directorio"
+elif [[ -f "$RUTA" ]]; then
+    echo "Tipo: archivo regular"
+else
+    echo "Tipo: otro elemento especial"
+fi 
+
+
+
+
+
+
+
+
+
+
+
+
+
