@@ -28,7 +28,7 @@ listar_tareas() {
     fi
 }
 
-completar_tareas() {
+completar_tarea() {
     local id_buscar id desc estado fecha temp
     read -rp "ID de la tarea a completar: " id_buscar
     validar_id_existe "$id_buscar" || return 1
