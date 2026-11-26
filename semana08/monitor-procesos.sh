@@ -9,3 +9,9 @@
 #  2 - Argumento invalido
 
 set -euo pipefail
+
+listar_procesos() {
+    local usuario="$USER"
+    echo "=== PROCESOS DE $usuario (ORDENADOS POR %CPU) ==="
+    ps -u "$usuario" -o pid,stat,%cpu,%mem,comm --sort=-%cpu | head -n 11
+}
