@@ -25,3 +25,14 @@ if [ "$OPCION" = "-h" ]; then
     uso
     exit 0
 fi
+
+# paso 2:  Resumen general cuando no se pasan argumentos
+if [ -z "$OPCION" ]; then
+    echo "=== RESUMEN GENERAL DEL SISTEMA ==="
+    echo "Equipo:       $(hostname)"
+    echo "Distribucion: $(grep '^PRETTY_NAME=' /etc/os-release | cut -d'"' -f2)"
+    echo "Kernel:       $(uname -r)"
+    echo "Encendido:    $(uptime -p)"
+    echo "Memoria disp: $(free -h | awk '/^Mem:/ {print $7}')"
+    exit 0
+fi
