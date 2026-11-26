@@ -1,0 +1,15 @@
+=== RESUMEN GENERAL DEL SISTEMA ===
+Equipo:       wgareca-VirtualBox
+Distribucion: Ubuntu 26.04.1 LTS
+Kernel:       7.0.0-34-generic
+Encendido:    up 16 hours, 44 minutes
+Memoria disp: 1,8Gi
+=== DATOS DEL USUARIO ===
+Usuario:    wgareca
+Directorio: /home/wgareca
+Shell:      /bin/bash
+Grupos:     wgareca adm cdrom sudo dip plugdev users lpadmin lxd
+==== USO DE DISCO ===
+S.ficheros     Tamaño Usados  Disp Uso% Montado en
+/dev/sda2         25G    11G   13G  47% /
+/dev/sda2         25G    11G   13G  47% /
